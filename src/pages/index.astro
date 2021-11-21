@@ -1,0 +1,42 @@
+---
+// Component Imports
+import Button from "../components/Button.astro";
+import CounterReact from "../components/CounterReact.jsx";
+import CounterSvelte from "../components/CounterSvelte.svelte";
+import CounterVue from "../components/CounterVue.vue";
+---
+
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome to Astro</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={Astro.resolve("../styles/global.css")}
+    />
+  </head>
+
+  <body class="container p-4">
+    <h1>Welcome to Crazy Project</h1>
+    <Button>I’m a Tailwind Button!</Button>
+
+    <CounterReact client:visible>
+      <h1>Counter React</h1>
+    </CounterReact>
+
+    <CounterSvelte client:visible>
+      <h1>Counter Svelte</h1>
+    </CounterSvelte>
+
+    <CounterVue client:visible>
+      <h1>Counter Vue</h1>
+    </CounterVue>
+  </body>
+
+  <script>
+    import { }
+  </script>
+</html>
